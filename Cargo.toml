@@ -1,0 +1,31 @@
+[package]
+name = "bevy-eure"
+version = "0.1.0"
+edition = "2024"
+keywords = ["bevy", "gamedev", "eure"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/eure-lang/bevy-eure"
+homepage = "https://eure.dev"
+
+[dependencies]
+bevy_app = { version = "0.18.0", default-features = false }
+bevy_asset = { version = "0.18.0", default-features = false }
+bevy_reflect = { version = "0.18.0", default-features = false }
+eure = { version = "0.1.6", git = "https://github.com/Hihaheho/eure" }
+thiserror = { version = "2.0" }
+bevy_transform = { version = "0.18.0", default-features = false, optional = true }
+bevy_math = { version = "0.18.0", default-features = false, optional = true }
+bevy_ui = { version = "0.18.0", default-features = false, optional = true }
+
+[features]
+default = ["transform", "math", "ui"]
+transform = ["dep:bevy_transform", "math"]
+math = ["dep:bevy_math"]
+ui = ["dep:bevy_ui"]
+
+[dev-dependencies]
+bevy = { version = "0.18.0", features = [
+    "file_watcher",
+    "asset_processor",
+] }

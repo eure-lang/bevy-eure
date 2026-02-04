@@ -1,0 +1,15 @@
+*
+!*/
+!.gitignore
+!.gitkeep
+
+/target
+
+!README.md
+!LICENSE
+
+!Cargo.toml
+!Cargo.lock
+
+!src/**/*.rs
+!examples/**/*.rs

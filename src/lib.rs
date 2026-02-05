@@ -1,6 +1,8 @@
 mod proxy;
 pub use proxy::*;
 
+pub use eure;
+
 use std::marker::PhantomData;
 
 use bevy_app::{App, Plugin};

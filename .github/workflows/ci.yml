@@ -36,7 +36,9 @@ jobs:
           components: rustfmt, clippy
       - name: Format Check
         run: cargo fmt --check
+      - name: Install Bevy dependencies
+        run: sudo apt-get update; sudo apt-get install --no-install-recommends g++ pkg-config libx11-dev libasound2-dev libudev-dev libxkbcommon-x11-0 libwayland-dev libxkbcommon-dev
       - name: Clippy Check
         run: cargo clippy --locked --all-targets --all-features -- -D warnings
       - name: Test
-        run: cargo test --locked --all-targets --all-features
+        run: cargo +nightly test --locked --all-targets --all-features

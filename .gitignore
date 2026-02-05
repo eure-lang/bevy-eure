@@ -13,3 +13,5 @@
 
 !src/**/*.rs
 !examples/**/*.rs
+
+!/.github/workflows/**/*.yml

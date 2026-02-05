@@ -2500,7 +2500,7 @@ dependencies = [
 [[package]]
 name = "eure"
 version = "0.1.6"
-source = "git+https://github.com/Hihaheho/eure#20b684f2963e8b1ce0ad2c260cb8bbbaadff2d85"
+source = "git+https://github.com/Hihaheho/eure#9b22590c02e9419ef6a2511393c67cc9bfdde34f"
 dependencies = [
  "annotate-snippets",
  "anyhow",
@@ -2523,7 +2523,7 @@ dependencies = [
 [[package]]
 name = "eure-document"
 version = "0.1.6"
-source = "git+https://github.com/Hihaheho/eure#20b684f2963e8b1ce0ad2c260cb8bbbaadff2d85"
+source = "git+https://github.com/Hihaheho/eure#9b22590c02e9419ef6a2511393c67cc9bfdde34f"
 dependencies = [
  "indexmap",
  "num-bigint",
@@ -2535,7 +2535,7 @@ dependencies = [
 [[package]]
 name = "eure-env"
 version = "0.1.6"
-source = "git+https://github.com/Hihaheho/eure#20b684f2963e8b1ce0ad2c260cb8bbbaadff2d85"
+source = "git+https://github.com/Hihaheho/eure#9b22590c02e9419ef6a2511393c67cc9bfdde34f"
 dependencies = [
  "chrono",
  "eros",
@@ -2553,7 +2553,7 @@ dependencies = [
 [[package]]
 name = "eure-macros"
 version = "0.1.6"
-source = "git+https://github.com/Hihaheho/eure#20b684f2963e8b1ce0ad2c260cb8bbbaadff2d85"
+source = "git+https://github.com/Hihaheho/eure#9b22590c02e9419ef6a2511393c67cc9bfdde34f"
 dependencies = [
  "convert_case 0.10.0",
  "darling 0.23.0",
@@ -2565,7 +2565,7 @@ dependencies = [
 [[package]]
 name = "eure-parol"
 version = "0.1.6"
-source = "git+https://github.com/Hihaheho/eure#20b684f2963e8b1ce0ad2c260cb8bbbaadff2d85"
+source = "git+https://github.com/Hihaheho/eure#9b22590c02e9419ef6a2511393c67cc9bfdde34f"
 dependencies = [
  "anyhow",
  "eure-tree",
@@ -2578,7 +2578,7 @@ dependencies = [
 [[package]]
 name = "eure-schema"
 version = "0.1.6"
-source = "git+https://github.com/Hihaheho/eure#20b684f2963e8b1ce0ad2c260cb8bbbaadff2d85"
+source = "git+https://github.com/Hihaheho/eure#9b22590c02e9419ef6a2511393c67cc9bfdde34f"
 dependencies = [
  "ahash",
  "convert_case 0.9.0",
@@ -2596,7 +2596,7 @@ dependencies = [
 [[package]]
 name = "eure-tree"
 version = "0.1.6"
-source = "git+https://github.com/Hihaheho/eure#20b684f2963e8b1ce0ad2c260cb8bbbaadff2d85"
+source = "git+https://github.com/Hihaheho/eure#9b22590c02e9419ef6a2511393c67cc9bfdde34f"
 dependencies = [
  "ahash",
  "bon",

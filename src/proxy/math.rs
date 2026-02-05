@@ -1,4 +1,4 @@
-use bevy_math::Quat;
+use bevy_math::{Quat, curve::JumpAt};
 use eure::{FromEure, IntoEure};
 
 #[derive(FromEure, IntoEure)]
@@ -45,4 +45,65 @@ impl From<QuatProxy> for Quat {
     fn from(value: QuatProxy) -> Self {
         Quat::from_array(value.0)
     }
+}
+
+#[derive(FromEure, IntoEure)]
+#[eure(proxy = "bevy_math::curve::EaseFunction", non_exhaustive)]
+pub enum EaseFunctionProxy {
+    Linear,
+    QuadraticIn,
+    QuadraticOut,
+    QuadraticInOut,
+    CubicIn,
+    CubicOut,
+    CubicInOut,
+    QuarticIn,
+    QuarticOut,
+    QuarticInOut,
+    QuinticIn,
+    QuinticOut,
+    QuinticInOut,
+    SmoothStepIn,
+    SmoothStepOut,
+    SmoothStep,
+    SmootherStepIn,
+    SmootherStepOut,
+    SmootherStep,
+    SineIn,
+    SineOut,
+    SineInOut,
+    CircularIn,
+    CircularOut,
+    CircularInOut,
+    ExponentialIn,
+    ExponentialOut,
+    ExponentialInOut,
+    ElasticIn,
+    ElasticOut,
+    ElasticInOut,
+    BackIn,
+    BackOut,
+    BackInOut,
+    BounceIn,
+    BounceOut,
+    BounceInOut,
+    Steps(usize, #[eure(via = "JumpAtProxy")] JumpAt),
+    Elastic(f32),
+}
+
+#[derive(FromEure, IntoEure)]
+#[eure(proxy = "bevy_math::curve::JumpAt")]
+pub enum JumpAtProxy {
+    Start,
+    End,
+    None,
+    Both,
+}
+
+#[test]
+fn test_variant_count_ease_function() {
+    assert_eq!(
+        std::mem::variant_count::<EaseFunctionProxy>(),
+        std::mem::variant_count::<bevy_math::curve::EaseFunction>()
+    );
 }

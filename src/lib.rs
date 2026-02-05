@@ -1,3 +1,6 @@
+// Used in tests that proxies matched to the target non_exhaustive enum
+#![cfg_attr(test, feature(variant_count))]
+
 mod proxy;
 pub use proxy::*;
 
